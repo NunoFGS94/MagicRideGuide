@@ -30,7 +30,7 @@ public class restController {
         return ResponseEntity.ok().body(guide);
     }
 
-    @PostMapping("/users")
+    @PostMapping("/guides")
     public Guide createGuide(@Valid @RequestBody Guide guide){
         return guideRepository.save(guide);
     }
