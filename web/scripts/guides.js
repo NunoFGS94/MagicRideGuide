@@ -29,7 +29,7 @@ function populateTable(array) {
 
     array.forEach(function (element) {
 
-        var row = '<tr class="populated"> <td class="align-middle"><img src= "resources/maf.png" height="80" width="80" onclick="hideList()"></td>' +
+        var row = '<tr class="populated"> <td class="align-middle"><a href="guide-view/' + element.id + '" target="content"><img src= "resources/maf.png" height="80" width="80"></a></td>' +
             '<td id="two" class="align-middle">' + element.name + '</td>' +
             '<td id="three" class="align-middle"><span class="yellow">&#9733;</span> ' + element.rating + '</td>' +
             '<td id="four" class="align-middle"><button id="tag1" class="interest">' + element.tag1 + '</button></td>' +
