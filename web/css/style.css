@@ -108,9 +108,12 @@ table {
 	width: 100%;
 }
 
+h1, h2 {
+    font-weight: bold;
+}
+
 h1 {
 	font-size: 50px;
-	font-weight: bold;
 }
 
 .map, .portrait, .description {
@@ -138,4 +141,18 @@ p, h1, span {
 
 .saul {
     font-weight: bold;
+}
+
+#guide-table {
+    border-collapse:separate; 
+    border-spacing: 0 1rem;
+
+}
+
+#guide-table td {
+    text-align: center;
+}
+
+.yellow {
+    color: #fbd16d;
 }
