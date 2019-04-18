@@ -12,18 +12,8 @@
 
     <link rel="icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 
-    <script src="scripts/index.js"></script>
-    <script src="scripts/vars.js"></script>
-    <script src='scripts/guide-view.js'></script>
     <title>Let's go on a Magic Carpet Ride~</title>
-
-
 </head>
 
 <body>
@@ -46,18 +36,15 @@
 
     <div class="container">
         <table>
-
             <tr>
-                <td rowspan="3">
+                <td class="portrait" rowspan="3">
                     <!-- GET picture from DB -->
-                    <img id="portrait" src="">
-                     <!--Dynamic guide photo-->
+                    <img id="portrait" src="resources/maf.png" />
                 </td>
 
                 <td>
                     <!-- GET name from DB -->
                     <h1 id="guide-name">Mafalda</h1>
-                    <span hidden id></span>
                 </td>
 
                 <td class="rating">
@@ -93,20 +80,20 @@
         </table>
 
         <div class="description">
-            <p id="description">
-                <!--Dynamic guide description-->
+            <p>
+                I love food and striking a pose in the most unforgettable places. If you're looking for a chill adventure with amazing food,
+                let me share this whole new world with you!
             </p>
         </div>
 
-        <div id="map">
-            <!--Dynamic guide map -->
-
+        <div class="map">
+            <iframe class="center" src="https://www.google.com/maps/d/embed?mid=1aYK4oer82KGr7YqFdfo4Ejroeh5iD0lV&hl=en" frameborder="0"
+                width="700" height="500"></iframe>
         </div>
-        <button>Hire me</button>
     </div>
 
     <div class="footer">
-        © 2019 Magic Rides. All rights reserved.
+        © 2019 Magic Carpet Rides. All rights reserved.
     </div>
 
 </body>

@@ -29,7 +29,7 @@ function populateTable(array) {
 
     array.forEach(function (element) {
 
-        var row = '<tr class="populated"> <td class="align-middle"><a href="guide-view/' + element.id + '" target="content"><img src= "resources/maf.png" height="80" width="80"></a></td>' +
+        var row = '<tr class="populated"> <td class="align-middle"><a href="guide-view/' + element.id + '" target="content"><img src= "resources/guides/' + element.id + '.png" height="80" width="80"></a></td>' +
             '<td id="two" class="align-middle">' + element.name + '</td>' +
             '<td id="three" class="align-middle"><span class="yellow">&#9733;</span> ' + element.rating + '</td>' +
             '<td id="four" class="align-middle"><button id="tag1" class="interest">' + element.tag1 + '</button></td>' +
@@ -37,19 +37,30 @@ function populateTable(array) {
             '<td id="six" class="align-middle"><button id="tag1" class="interest">' + element.tag3 + '</button></td>' +
             '<td id="seven" class="align-middle"><button id="tag1" class="interest">' + element.tag4 + '</button></td>' +
             '<td id="eight" class="align-middle"><button id="tag1" class="interest">' + element.tag5 + '</button></td>' +
-            '<td id="two" class="align-middle"><button onclick="printId(' + element.id + ')">Ask For More</button></td></tr><br>'
+            '<td id="two'+element.id +'" class="align-middle"><button onclick="printId(' + element.id + ')">Ask For More</button></td></tr><br>'
+
 
         $(row).appendTo(userstable);
     })
 }
 
+
 function printId(id) {
     
     globalId = id;
     console.log(globalId);
-    
+
     //go to another web site
-    //location.href=""
+    if(globalId === 19){
+        location.href="guide-view.html";
+    }
+    else if(globalId === 20){
+        location.href="guide-view.html";
+    }
+    else if(globalId === 21) {
+        location.href="guide-view.html";
+    }
+    
 }
 
 function hideList() {

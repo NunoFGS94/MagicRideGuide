@@ -1,0 +1,13 @@
+#form {
+    margin: 300px
+}
+
+#sign_in {
+    margin-left: 0px;
+}
+
+body {
+    background-image: url("resources/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
