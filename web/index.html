@@ -13,10 +13,12 @@
     <link rel="icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
     <title>Let's go on a Magic Carpet Ride~</title>
 </head>
 
-<body>
+<body class="yui3-skin-sam">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
         <div class="container-fluid">
@@ -91,13 +93,16 @@
                     </div>
 
                     <label class="col-md-1 col-form-label" for="selectDate">When?</label>
-                    <div class="col-md-3">
-                        <select id="selectbasic" name="selectDate" class="form-control">
-                            <!-- Calendar options? -->
-                            <option value="1">Today</option>
-                            <option value="2">Tomorrow</option>
-                        </select>
+                    <div id="leftcolumn" class="yui3-u col-form-label rightDate">
+                        <div id="links" style="padding-right: 20px">            
+                            <span id="selectedDate"></span>
+                        </div>
                     </div>
+
+                    <div id="rightcolumn" class="yui3-u leftCalendar">
+                        <div id="myCalendar"></div>
+                    </div>
+
                 </div>
                 <label for="selectDate">What kind of adventure are you looking for?</label>
                 <div class="buttons">
@@ -126,6 +131,26 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        YUI().use('calendar', 'datatype-date', 'cssbutton', function(Y) {
+
+            var calendar = new Y.Calendar({
+                contentBox: "#myCalendar",
+                width: '340px',
+                date: new Date()
+            }).render();
+
+            var dtdate = Y.DataType.Date;
+
+            calendar.on("selectionChange", function(ev) {
+
+                var newDate = ev.newSelection[0];
+
+                Y.one("#selectedDate").setHTML(dtdate.format(newDate));
+            });
+        });
+        </script>
 </body>
 
 </html>
