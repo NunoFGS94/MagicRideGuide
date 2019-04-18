@@ -37,34 +37,34 @@
 
             </div>
             <!-- If logged in - "Hello <username>" -->
-            <span class="text-absolute-right"><button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Log in </button> 
+            <span class="text-absolute-right"><button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Log in </button>
                 <span class="divider">|</span> <a href="register-url-here">Register</a></span>
         </div>
 
         <div id="id01" class="modal">
-    
+
             <form class="modal-content animate" action="" >
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <img src="img_avatar2.png" alt="Avatar" class="avatar">
                 </div>
-    
+
                 <div class="container">
-            
+
                     <input id="username" type="text" placeholder="Enter Username" >
-    
-            
+
+
                     <input id="password" type="password" placeholder="Enter Password" >
-                
+
                     <button id="forumButton" type="button" onclick="begin2()">Login</button>
                     <label>
-                
+
                     </label>
                 </div>
-    
+
                 <div class="container" style="background-color:#f1f1f1">
                     <button id="forumButton" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                
+
                 </div>
             </form>
         </div>
@@ -142,7 +142,8 @@
                 <button class="tag">Hiking</button>
                 <button class="tag">Music</button>
                 </div>
-                <p class="saul" align="center"><img src="resources/saul-icon.png">Let's go!</p>
+                <br>
+                <p class="saul" align="center"><a href="guides.html"><img src="resources/saul-icon.png">Let's go!</a></p>
             </form>
         </div>
 
@@ -184,7 +185,7 @@
         <script>
             // Get the modal
             //var modal = document.getElementById('id01');
-        
+
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
                 if (event.target == modal) {
@@ -223,7 +224,7 @@
             if(!ok){
                 alert("incorrect");
             }
-            
+
         }
 
         function errorCallback(request, status, error) {
