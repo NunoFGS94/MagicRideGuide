@@ -12,14 +12,16 @@
 
     <link rel="icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Let's go on a Magic Carpet Ride~</title>
+    
+    <title>Let's go on a Magic Carpet Ride</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/guides.js"></script>
+    <script type="text/javascript" src="scripts/vars.js"></script>
+    <script src="scripts/index.js"></script>
 
 </head>
 
@@ -36,10 +38,41 @@
 
             </div>
             <!-- If logged in - "Hello <username>" -->
-            <span class="text-absolute-right">Log in
-                <span class="divider">|</span> Register</span>
+                    <span id="notLoggedIn" class="text-absolute-right">
+                            <button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Log in </button>
+                            <span class="divider">|</span>
+                            <a href="signup.html">Register</a>
+                        </span>
+                        <span id="loggedIn" class="text-absolute-right">Hello user-here</span>
         </div>
     </nav>
+
+    <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+
+                    <input id="username" type="text" placeholder="Enter Username">
+
+                    <input id="password" type="password" placeholder="Enter Password">
+
+                    <button id="forumButton" type="button">Login</button>
+                    <label>
+
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button id="forumButton2" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+                </div>
+            </form>
+        </div>
 
     <div id="content">
         <img class="cover center" src="resources/people.png" />
@@ -52,9 +85,6 @@
         </div>
     </div>
 
-    <div class="footer">
-        © 2019 Magic Carpet Rides. All rights reserved.
-    </div>
 </body>
 
 </html>

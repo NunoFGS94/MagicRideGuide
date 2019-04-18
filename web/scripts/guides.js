@@ -36,10 +36,20 @@ function populateTable(array) {
             '<td id="five" class="align-middle"><button id="tag1" class="interest">' + element.tag2 + '</button></td>' +
             '<td id="six" class="align-middle"><button id="tag1" class="interest">' + element.tag3 + '</button></td>' +
             '<td id="seven" class="align-middle"><button id="tag1" class="interest">' + element.tag4 + '</button></td>' +
-            '<td id="eight" class="align-middle"><button id="tag1" class="interest">' + element.tag5 + '</button></td></tr><br>'
+            '<td id="eight" class="align-middle"><button id="tag1" class="interest">' + element.tag5 + '</button></td>' +
+            '<td id="two" class="align-middle"><button onclick="printId(' + element.id + ')">Ask For More</button></td></tr><br>'
 
         $(row).appendTo(userstable);
     })
+}
+
+function printId(id) {
+    
+    globalId = id;
+    console.log(globalId);
+    
+    //go to another web site
+    //location.href=""
 }
 
 function hideList() {
