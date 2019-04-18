@@ -37,7 +37,36 @@
 
             </div>
             <!-- If logged in - "Hello <username>" -->
-            <span class="text-absolute-right">Log in <span class="divider">|</span> Register</span>
+            <span class="text-absolute-right"><button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Log in </button> 
+                <span class="divider">|</span> <a href="register-url-here">Register</a></span>
+        </div>
+
+        <div id="id01" class="modal">
+    
+            <form class="modal-content animate" action="" >
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+    
+                <div class="container">
+            
+                    <input id="username" type="text" placeholder="Enter Username" >
+    
+            
+                    <input id="password" type="password" placeholder="Enter Password" >
+                
+                    <button id="forumButton" type="button" onclick="begin2()">Login</button>
+                    <label>
+                
+                    </label>
+                </div>
+    
+                <div class="container" style="background-color:#f1f1f1">
+                    <button id="forumButton" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                
+                </div>
+            </form>
         </div>
     </nav>
 
@@ -91,7 +120,7 @@
                             <option value="2">Prague</option>
                         </select>
                     </div>
-
+                    <!-- Calendar Stuff-->
                     <label class="col-md-1 col-form-label" for="selectDate">When?</label>
                     <div id="leftcolumn" class="yui3-u col-form-label rightDate">
                         <div id="links" style="padding-right: 20px">            
@@ -150,7 +179,61 @@
                 Y.one("#selectedDate").setHTML(dtdate.format(newDate));
             });
         });
+    </script>
+
+        <script>
+            // Get the modal
+            //var modal = document.getElementById('id01');
+        
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         </script>
+
+    <script>
+        function begin2() {
+            var username = $('#username').val();
+            var password = $('#password').val();
+            console.log(username + "username");
+            console.log(password + "password");
+        $.ajax({
+            url: 'http://192.168.250.37:8080/api/users',
+            async: true,
+            success: successCallback,
+            error: errorCallback
+        })
+
+        function successCallback(response) {
+            var object = response;
+            let ok = false;
+            console.log(response);
+            console.log(object.username + "---------")
+            object.forEach(element => {
+                console.log(element.username);
+                console.log(password)
+                console.log(element.password)
+            if(element.username == username && element.password == password){
+                alert("correct!")
+                ok=true;
+                return null;
+            }});
+            if(!ok){
+                alert("incorrect");
+            }
+            
+        }
+
+        function errorCallback(request, status, error) {
+            console.log('Deu ruim, Baby!');
+            console.log(request);
+            console.log(status);
+            console.log(error);
+        }}
+
+    </script>
 </body>
 
 </html>
