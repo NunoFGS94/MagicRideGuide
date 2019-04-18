@@ -27,7 +27,7 @@
                     <span id="logo-text">Magic-Rides</span>
                 </a>
             </div>
-            <span class="text-absolute-right">Log in | Register</span>
+            <span class="text-absolute-right">Log in <span class="divider">|</span> Register</span>
         </div>
     </nav>
 
@@ -45,20 +45,28 @@
                     <!-- GET name from DB -->
                     <h1 id="guide-name">Mafalda</h1>
                 </td>
+
+                <td class="rating">
+                    <img id="star" src="resources/star.png">
+                    <!-- GET rating from DB -->
+                    <span id="rating">2.5</span>
+                </td>
             </tr>
 
             <tr>
-                <td>
+                <td colspan="2">
                     <b>
+                        <!-- GET city from DB -->
                         <span id="city">Lisbon</span>
                     </b>
-                    <span class="bullet">&#8226;</span>
+                    <span class="divider">&#8226;</span>
+                    <!-- GET languages from DB -->
                     <span id="languages">Portuguese, English</span>
                 </td>
             </tr>
 
             <tr>
-                <td>
+                <td colspan="2">
                     Stuff I like:
                     <br>
                     <button id="tag1" class="interest">Food</button>
@@ -82,6 +90,10 @@
                 width="700" height="500"></iframe>
         </div>
     </div>
+
+    <div class="footer">
+            © 2019 Magic Carpet Rides. All rights reserved.
+       </div>
 
 </body>
 
