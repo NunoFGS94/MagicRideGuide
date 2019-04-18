@@ -134,10 +134,9 @@ p, h1, span {
     font-size: 12px;
     padding: 20px;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-    clear: both;
 }
 
 .saul {

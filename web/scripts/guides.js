@@ -29,7 +29,7 @@ function populateTable(array) {
 
     array.forEach(function (element) {
 
-        var row = '<tr class="populated"> <td class="align-middle"><a href="guide-view.html"><img src= "resources/maf.png" height="80" width="80"></a> </td>' +
+        var row = '<tr class="populated"> <td class="align-middle"><img src= "resources/maf.png" height="80" width="80" onclick="hideList()"></td>' +
             '<td id="two" class="align-middle">' + element.name + '</td>' +
             '<td id="three" class="align-middle"><span class="yellow">&#9733;</span> ' + element.rating + '</td>' +
             '<td id="four" class="align-middle"><button id="tag1" class="interest">' + element.tag1 + '</button></td>' +
@@ -40,4 +40,12 @@ function populateTable(array) {
 
         $(row).appendTo(userstable);
     })
+}
+
+function hideList() {
+    var div = document.getElementById('content');
+
+    if (div.style.display == 'none') {
+        div.style.display = 'block';
+    }
 }

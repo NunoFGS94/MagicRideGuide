@@ -93,14 +93,14 @@
                     </div>
 
                     <label class="col-md-1 col-form-label" for="selectDate">When?</label>
-                    <div id="leftcolumn" class="yui3-u col-form-label rightDate">
+                    <div id="leftcolumn" class="col-form-label">
                         <div id="links" style="padding-right: 20px">            
                             <span id="selectedDate"></span>
                         </div>
                     </div>
 
-                    <div id="rightcolumn" class="yui3-u leftCalendar">
-                        <div id="myCalendar"></div>
+                    <div id="rightcolumn" class="col-md-3">
+                        <input class="form-control" type="date" name="date">
                     </div>
 
                 </div>
@@ -113,6 +113,7 @@
                 <button class="tag">Hiking</button>
                 <button class="tag">Music</button>
                 </div>
+                <br>
                 <p class="saul" align="center"><a href="guides.html"><img src="resources/saul-icon.png">Let's go!</a></p>
             </form>
         </div>
@@ -132,25 +133,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        YUI().use('calendar', 'datatype-date', 'cssbutton', function(Y) {
-
-            var calendar = new Y.Calendar({
-                contentBox: "#myCalendar",
-                width: '340px',
-                date: new Date()
-            }).render();
-
-            var dtdate = Y.DataType.Date;
-
-            calendar.on("selectionChange", function(ev) {
-
-                var newDate = ev.newSelection[0];
-
-                Y.one("#selectedDate").setHTML(dtdate.format(newDate));
-            });
-        });
-        </script>
 </body>
 
 </html>
