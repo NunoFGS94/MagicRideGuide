@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'XXII ARABIAN-ONENIGHTSTAND';
+    src: url('../resources/XXIIARABIAN-ONENIGHTSTAND-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+#logo-text {
+    font-family: 'XXII ARABIAN-ONENIGHTSTAND';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    position: relative; top: 5px;
+    color: #43023c;
+}
+
+.carousel-inner, .carousel-caption{
+    height: 600px;
+}
+
+
+.caption {
+    position: absolute;
+    top: 500px;
+    width: 100%;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+}
+
+.footer {
+    background-color: #43023c;
+    color: #ccc0c4;
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	height: 50px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.bullet {
+	color: #ac7b9b;
+}
+
+.tag, .interest {
+	background-color:#ac7b9b;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:14px;
+	padding:10px 20px;
+	text-decoration:none;
+}
+
+.interest {
+	pointer-events: none;
+}
+
+.tag:active {
+    background-color: #900361;
+	position: relative;
+	top: 1px;
+}
+
+.item img {
+    max-height: 100%;  
+    max-width: 100%; 
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+
+.cover {
+    max-height: 500px;
+	height: 70%;
+	width: auto;
+}
+
+.portrait {
+	width: 200px;
+}
+
+#portrait {
+	height: 200px;
+	width: 200px;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table {
+	width: 100%;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.map, .portrait, .description {
+	padding: 20px;
+}
+
+.description p {
+	text-align: justify;
+	margin: 0;
+}

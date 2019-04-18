@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+    <link rel="icon" href="resources/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Let's go on a Magic Carpet Ride~</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <a href="index.html" class="navbar-brand py-1">
+                    <img id="logo" src="resources/icon.png" alt="Flying Carpet Logo">
+                    <span id="logo-text">Magic-Rides</span>
+                </a>
+            </div>
+            <span class="text-absolute-right">Log in | Register</span>
+        </div>
+    </nav>
+
+    <img class="cover center" src="resources/table-cover.jpg" />
+
+    <div class="container">
+        <table>
+            <tr>
+                <td class="portrait" rowspan="3">
+                    <!-- GET picture from DB -->
+                    <img id="portrait" src="resources/maf.png" />
+                </td>
+
+                <td>
+                    <!-- GET name from DB -->
+                    <h1 id="guide-name">Mafalda</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>
+                        <span id="city">Lisbon</span>
+                    </b>
+                    <span class="bullet">&#8226;</span>
+                    <span id="languages">Portuguese, English</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Stuff I like:
+                    <br>
+                    <button id="tag1" class="interest">Food</button>
+                    <button id="tag2" class="interest">Sightseeing</button>
+                    <button id="tag3" class="interest">Sightseeing</button>
+                    <button id="tag4" class="interest">Sightseeing</button>
+                    <button id="tag5" class="interest">Sightseeing</button>
+                </td>
+            </tr>
+        </table>
+
+        <div class="description">
+            <p>
+                I love food and striking a pose in the most unforgettable places. If you're looking for a chill adventure with amazing food,
+                let me share this whole new world with you!
+            </p>
+        </div>
+
+        <div class="map">
+            <iframe class="center" src="https://www.google.com/maps/d/embed?mid=1aYK4oer82KGr7YqFdfo4Ejroeh5iD0lV&hl=en" frameborder="0"
+                width="700" height="500"></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>
