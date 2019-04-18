@@ -134,17 +134,23 @@ p, h1, span {
     font-size: 12px;
     padding: 20px;
     text-align: center;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    clear: both;
 }
 
 .saul {
     font-weight: bold;
 }
 
+.leftCalendar {
+    position: absolute;
+    left: 70%;
+}
+
 #guide-table {
-    border-collapse:separate; 
+    border-collapse:separate;
     border-spacing: 0 1rem;
 
 }
